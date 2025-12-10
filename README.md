@@ -52,34 +52,11 @@ Contractions occur more often in informal genres than in formal genres.
   - A list or pattern of contractions (e.g. “don’t”, “can’t”, “I’m”, “we’ve”, “she’s”, “they’re”, “won’t”, “wouldn’t”, “it’s” when used as a contraction) will be defined and implemented in code.  
   - Based on the normalised rates, texts or genres can be described as having relatively high or low contraction rates for analysis and visualisation.
 
-### Preprocessing and identification of contractions
-
-- Texts are tokenised and lowercased; punctuation and whitespace are handled consistently so that tokens containing apostrophes can be reliably identified.  
-- A regular expression or explicit list will be used to detect contractions (including negative forms and auxiliary + pronoun combinations).  
-- Total word counts per text are computed in the same preprocessing step, so that contraction counts can be normalised per 1,000 words.  
-- Ambiguous cases (e.g. “’s” as possessive vs “is/has”) are handled by simple rules, which will be described in comments in the code.
-
 ### Analysis and statistical tests
 
 - For each text, a contraction frequency (per 1,000 words) is calculated.  
 - For each genre, the mean and distribution of contraction frequency are computed across texts.  
 - Informal genres (Spoken, TV/Movies, Fiction) are compared to formal genres (Academic, Newspapers) using appropriate statistical tests (for example, a t‑test or non‑parametric equivalent, or a comparison across all genres using ANOVA if assumptions are met).  
 - Visualisations (e.g. boxplots or bar charts) will be used to show differences in contraction frequency between genres.
-
-### Code, tools, and reproducibility
-
-- The analysis will be implemented in Python, using common libraries such as:
-  - `pandas` for data handling  
-  - `re` (regular expressions) for detecting contractions  
-  - `matplotlib` / `seaborn` for visualisation  
-  - `scipy` or `statsmodels` for statistical tests  
-- The repository will contain:
-  - `scripts/01_preprocess_and_count.py` for extracting texts, counting contractions, and producing a CSV with per‑text frequencies.  
-  - `scripts/02_analysis_and_plots.ipynb` (or `.py`) for statistical analysis and figures.  
-  - A `requirements.txt` file listing the Python package versions used.  
-- A typical reproduction workflow will be:
-  1. Obtain the corpus as described above and place raw data in the `data/` folder (instructions will be added once the final corpus is chosen).  
-  2. Run `scripts/01_preprocess_and_count.py` to generate a CSV with contraction frequencies per text and genre.  
-  3. Run `scripts/02_analysis_and_plots.ipynb` (or `.py`) to perform the statistical analysis and generate the plots used in the report.  
 
 The final report (PDF) and all scripts necessary to reproduce the results will be added to this repository before submission, in line with the course guidelines.
