@@ -12,7 +12,7 @@ Are contractions more frequent in informal genres (Spoken, TV/Movies, Fiction) t
 - **Difference: 8x more** in informal genres
 
 ## Files
-- `FinalReport_Contraction_Genres_SofieReinders.pdf
+- `FinalReport_Contraction_Genres_SofieReinders.pdf`
 - `mybibb.bib` - Bibliography
 
 ## Data Source
